@@ -16,7 +16,8 @@ public class Player : MonoBehaviour {
 
 		if(Physics.Raycast(transform.position,transform.forward, out hit)){
 				if(hit.transform.GetComponent<Mole>() != null){
-					Debug.Log ("Hit a mole");
+					Mole mole = hit.transform.GetComponent<Mole> ();
+					mole.OnHit ();
 					
 				}
 			}
